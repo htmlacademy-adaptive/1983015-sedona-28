@@ -1,0 +1,21 @@
+@use "../variables.scss";
+
+.modal {
+  width: 320px;
+  padding-top: 45px;
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.modal__text {
+  margin-bottom: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal__button {
+  margin: 0 auto;
+}

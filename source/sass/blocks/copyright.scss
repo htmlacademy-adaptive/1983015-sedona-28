@@ -1,0 +1,6 @@
+@use "../variables.scss";
+
+.copyright {
+  text-transform: uppercase;
+  color: variables.$two-color;
+}

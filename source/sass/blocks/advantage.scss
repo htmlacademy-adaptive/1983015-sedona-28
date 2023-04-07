@@ -1,0 +1,32 @@
+@use "../sass/variables.scss";
+
+.advantage {
+  width: 320px;
+  text-align: center;
+}
+
+.advantage__wrapper {
+  padding: 37px 18px;
+&--image {
+  color: variables.$one-color;
+  background-color: variables.$color-background;
+  }
+}
+
+.advantage__title {
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantage__number {
+  margin-bottom: 17px;
+}
+
+.advantage__service-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 46px;
+}

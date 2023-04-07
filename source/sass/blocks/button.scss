@@ -1,0 +1,17 @@
+@use "../variables.scss";
+
+.button {
+  display: block;
+  padding: 16px 40px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: variables.$one-color;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  background-color: variables.$color-background;
+  border: none;
+  cursor: pointer;
+}

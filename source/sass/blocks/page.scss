@@ -1,0 +1,19 @@
+@use "../variables.scss";
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: variables.$three-color;
+  background-color: variables.$one-color;
+}

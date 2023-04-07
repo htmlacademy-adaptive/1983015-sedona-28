@@ -1,0 +1,27 @@
+@use "../variables.scss";
+
+.form {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.form__group {
+  width: 320px;
+  margin: 0;
+  margin-bottom: 39px;
+  padding-top: 24px;
+  border: none;
+}
+
+.form__label {
+  text-transform: uppercase;
+  color: variables.$three-color;
+}
+
+.form__input {
+  margin-bottom: 16px;
+}
+
+.form__buttom {
+  margin: 0 auto;
+}

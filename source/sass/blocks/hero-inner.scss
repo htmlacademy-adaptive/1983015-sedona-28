@@ -1,0 +1,15 @@
+@use "../variables.scss";
+
+.hero-inner {
+  padding: 52px 45px 67px;
+  background-color: variables.$color-bg-under;
+  background-image: url("../../img/intro-triangle.svg"), url("../../img/back-desktop.jpg");
+  background-position: bottom, center;
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.hero-inner__image {
+  display: block;
+  margin: 0 auto;
+}
