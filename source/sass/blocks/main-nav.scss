@@ -1,5 +1,9 @@
 @use "../variables.scss";
 
+.main-nav {
+  display: none;
+}
+
 .main-nav__list {
   position: absolute;
   top: 0;
@@ -15,7 +19,6 @@
 
 
 .main-nav__link {
-  display: block;
   padding: 17px 50px 12px;
   font-weight: 700;
   font-size: 18px;
@@ -25,4 +28,3 @@
   text-align: center;
   color: variables.$one-color;
 }
-
