@@ -1,0 +1,21 @@
+@use "../variables.scss";
+
+.footer {
+  width: 320px;
+  padding: 33px 82px;
+}
+
+.footer__slogan {
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: variables.$two-color;;
+}
+
+.footer__social {
+  margin-bottom: 30px;
+}
+

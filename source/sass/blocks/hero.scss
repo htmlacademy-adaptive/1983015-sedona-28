@@ -1,0 +1,15 @@
+@use "../variables.scss";
+
+.hero {
+  padding: 90px 19px 85px;
+  background-color: variables.$color-bg-under;
+  background-image: url("../../img/intro-triangle.svg"), url("../../img/back-mobile.jpg");
+  background-position: bottom, center;
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.hero__slogan {
+  display: block;
+  margin: 0 auto;
+}

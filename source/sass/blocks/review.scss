@@ -1,0 +1,19 @@
+@use "../variables.scss";
+
+.review {
+  width: 320px;
+  padding-top: 36px;
+}
+
+.review__title {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.review__description {
+  margin-bottom: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: variables.$three-color;
+}
+

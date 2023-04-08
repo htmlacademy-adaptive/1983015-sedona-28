@@ -1,0 +1,22 @@
+@use "../variables.scss";
+
+.search {
+  width: 320px;
+  padding: 38px 18px 49px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search__title {
+  margin: 0;
+  margin-bottom: 21px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: variables.$two-color;
+}
+
+.search__text {
+  margin: 0;
+  margin-bottom: 32px;
+}

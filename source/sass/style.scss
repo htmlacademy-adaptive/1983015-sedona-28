@@ -1,1 +1,33 @@
-// Начните писать стили здесь
+// добавляем переменные
+@use "../sass/variables.scss";
+
+// базовые блоки
+@use "../sass/globals/fonts.scss";
+@use "../sass/globals/global.scss";
+
+// блоки компонентов
+@use "../sass/blocks/page.scss";
+@use "../sass/blocks/visually-hidden.scss";
+@use "../sass/blocks/main-header.scss";
+@use "../sass/blocks/logo.scss";
+@use "../sass/blocks/main-nav.scss";
+@use "../sass/blocks/main-index.scss";
+@use "../sass/blocks/hero.scss";
+@use "../sass/blocks/advantages.scss";
+@use "../sass/blocks/title.scss";
+@use "../sass/blocks/advantage.scss";
+@use "../sass/blocks/services.scss";
+@use "../sass/blocks/search.scss";
+@use "../sass/blocks/button.scss";
+@use "..//sass/blocks/footer.scss";
+@use "..//sass/blocks/social.scss";
+@use "..//sass/blocks/copyright.scss";
+@use "..//sass/blocks/main-inner.scss";
+@use "..//sass/blocks/hero-inner.scss";
+@use "..//sass/blocks/photos.scss";
+@use "..//sass/blocks/photo.scss";
+@use "..//sass/blocks/video.scss";
+@use "..//sass/blocks/main-form.scss";
+@use "..//sass/blocks/review.scss";
+@use "..//sass/blocks/form.scss";
+@use "..//sass/blocks/modal.scss";
