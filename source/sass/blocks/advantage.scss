@@ -1,20 +1,42 @@
 @use "../sass/variables.scss";
 
 .advantage {
-  width: 320px;
   text-align: center;
 }
 
+.advantage__container {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  &--town {
+    @media (min-width: variables.$tablet-width) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}
+
 .advantage__wrapper {
+  color: variables.$one-color;
   padding: 37px 18px;
 
-  &--image {
-    color: variables.$one-color;
-    background-color: variables.$color-background;
+  &--town {
+    padding-top: 54px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 52px 33px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 52px 50px;
   }
 }
 
 .advantage__title {
+  margin: 0;
   margin-bottom: 11px;
   font-weight: 700;
   font-size: 18px;
@@ -25,9 +47,18 @@
   margin-bottom: 17px;
 }
 
+.advantage__description {
+  margin: 0;
+}
+
+.advantage__image {
+  vertical-align: bottom;
+  object-fit: contain;
+}
+
 .advantage__service-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 46px;
+  background-color: variables.$one-color;
 }

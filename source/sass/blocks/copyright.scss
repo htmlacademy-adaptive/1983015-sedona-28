@@ -1,6 +1,19 @@
 @use "../variables.scss";
 
 .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.copyright__text {
+  margin-right: 12px;
+  font-weight: 400;
   text-transform: uppercase;
   color: variables.$two-color;
+}
+
+.copyright__link {
+  display: block;
 }

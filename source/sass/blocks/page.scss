@@ -5,16 +5,27 @@
 }
 
 .page__body {
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  min-height: 100%;
   min-width: 320px;
+  max-width: 1280px;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: variables.$three-color;
-  background-color: variables.$one-color;
+  background-color: variables.$color-bg-body;
+}
+
+.page__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 1200px;
+    margin: 0 auto;
+    background-color: variables.$one-color;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
 }

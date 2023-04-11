@@ -1,18 +1,42 @@
+@use "../sass/variables.scss";
+
 .services {
-  padding-top: 23px;
+  background-color: variables.$one-color;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .services__item {
-  width: 320px;
-  padding-left: 65px;
-  padding-right: 18px;
+  padding: 23px 18px 10px 65px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 331px;
+    padding: 157px 33px 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-height: 330px;
+    padding: 166px 50px 70px;
+  }
 }
 
 .services__title {
+  margin: 0;
   margin-bottom: 16px;
   text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: center;
+  }
 }
 
 .services__description {
   text-align: left;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: center;
+  }
 }

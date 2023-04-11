@@ -1,12 +1,21 @@
+@use "../sass/variables.scss";
+
 .advantages {
   padding-top: 32px;
   text-transform: uppercase;
 }
 
 .advantages__wrapper {
-  width: 284px;
-  margin: 0 auto;
-  margin-bottom: 16px;
+  padding: 0 24px;
+  margin-bottom: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 124px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 397px;
+  }
 }
 
 .advantages__lead {
@@ -23,8 +32,42 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__item {
-  padding: 24px 18px;
+  padding: 24px 32px;
+  background-color: variables.$color-background-advantage;
+
+  &--theme-grey {
+    @media (min-width: variables.$tablet-width) {
+      width: 256px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      width: 400px;
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    min-height: 256px;
+    padding: 41px 33px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 52px 50px;
+  }
+
+  &--image {
+    padding: 0;
+    background-color: variables.$color-background;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 0;
+    }
+  }
 }
