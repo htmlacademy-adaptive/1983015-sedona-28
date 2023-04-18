@@ -1,32 +1,54 @@
 @use "../sass/variables.scss";
 
 .advantage {
-  width: 320px;
   text-align: center;
 }
 
-.advantage__wrapper {
-  padding: 37px 18px;
-&--image {
-  color: variables.$one-color;
-  background-color: variables.$color-background;
+.advantage__container {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  &--town {
+    @media (min-width: variables.$tablet-width) {
+      grid-template-columns: 1fr 2fr;
+    }
   }
 }
 
 .advantage__title {
+  margin: 0;
   margin-bottom: 11px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 11px;
+    font-size: 21px;
+  }
 }
 
 .advantage__number {
   margin-bottom: 17px;
 }
 
+.advantage__description {
+  margin: 0;
+}
+
+.advantage__image {
+  display: block;
+  object-fit: contain;
+}
+
 .advantage__service-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 46px;
+  background-color: variables.$one-color;
 }

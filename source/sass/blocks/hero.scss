@@ -1,11 +1,12 @@
 @use "../variables.scss";
 
 .hero {
-  padding: 90px 19px 85px;
+  padding-top: 90px;
+  padding-bottom: 85px;
   background-color: variables.$color-bg-under;
-  background-image: url("../../img/intro-triangle.svg"), url("../../img/back-mobile.jpg");
-  background-position: bottom, center;
-  background-size: auto, cover;
+  background-image: url("../img/intro-triangle.svg"), url("../img/back-mobile.jpg");
+  background-position: bottom 0 center, center;
+  background-size: 100%, cover;
   background-repeat: no-repeat, no-repeat;
 }
 

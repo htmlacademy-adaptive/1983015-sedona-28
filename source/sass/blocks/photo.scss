@@ -1,17 +1,39 @@
 @use "../variables.scss";
 
 .photo {
-  width: 320px;
-  padding: 24px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+    padding: 0;
+  }
+}
+
+.photo__container {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 20px 15px;
+    background-color: variables.$color-bg-body;
+  }
 }
 
 .photo__image {
   display: block;
   margin-bottom: 15px;
+  align-self: center;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+  }
 }
 
 .photo__subtitle {
   margin: 0;
+  font-size: 14px;
   text-transform: uppercase;
   color: variables.$two-color;
 }
@@ -21,9 +43,29 @@
   margin-bottom: 11px;
 }
 
+.photo__button {
+  display: flex;
+  padding: 0;
+  min-width: 50px;
+  min-height: 26px;
+  font-family: inherit;
+  background-image: url("../img/like-icon.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    align-self: center;
+  }
+}
+
 .photo__likes {
+  align-self: flex-end;
+  padding-left: 37px;
   font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
   text-transform: uppercase;
   color: variables.$two-color;
 }
-

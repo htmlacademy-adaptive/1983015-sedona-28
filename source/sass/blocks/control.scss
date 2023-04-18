@@ -1,0 +1,52 @@
+@use "../variables.scss";
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 62px;
+}
+
+.control__text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: variables.$two-color;
+}
+
+.control__mark {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 46px;
+  background-color: variables.$color-bg-body;
+  border-radius: 4px;
+}
+
+.control__input[type="radio"] + .control__mark {
+  border-radius: 50%;
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: variables.$three-color;
+  border-radius: 50%;
+  content: "";
+}
+
+.control__input[type="checkbox"]:checked + .control__mark::before {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/tick.svg");
+  background-size: 22px 16px;
+  background-repeat: no-repeat;
+  content: "";
+}

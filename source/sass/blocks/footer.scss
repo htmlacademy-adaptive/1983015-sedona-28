@@ -1,21 +1,49 @@
 @use "../variables.scss";
 
 .footer {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
   padding: 33px 82px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 36px 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 36px 120px;
+  }
 }
 
 .footer__slogan {
-  margin-bottom: 30px;
+  margin: 0;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
-  color: variables.$two-color;;
+  color: variables.$two-color;
+
+  @media (min-width: variables.$tablet-width) {
+    justify-self: start;
+    align-self: center;
+  }
 }
 
 .footer__social {
-  margin-bottom: 30px;
+  @media (min-width: variables.$tablet-width) {
+    justify-self: center;
+    align-self: center;
+  }
 }
 
+.footer__copyright {
+  @media (min-width: variables.$tablet-width) {
+    justify-self: end;
+    align-self: center;
+  }
+}
