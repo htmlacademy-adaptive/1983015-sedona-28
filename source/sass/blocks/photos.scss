@@ -1,17 +1,46 @@
+@use "../variables.scss";
+
 .photos {
-  width: 320px;
-  padding-top: 30px;
+  width: auto;
+  padding-top: 37px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 67px 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0;
+    padding-top: 100px;
+    padding-bottom: 67px;
+  }
 }
 
 .photos__wrapper {
-  margin: 0 auto 25px;
-  padding: 0 20px;
   text-align: center;
+  margin-bottom: 25px;
+
+  @media (max-width: variables.$mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 67px;
+  }
 }
 
 .photos__title {
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .photos__lead {
@@ -22,4 +51,54 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.photos__item {
+  position: relative;
+
+  @media (max-width: variables.$mobile-width-only) {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      width: auto;
+      height: 1px;
+      background-color: variables.$color-bg-disabled;
+      content: "";
+    }
+  }
+
+  &:last-child {
+    position: relative;
+
+    @media (max-width: variables.$mobile-width-only) {
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: -20px;
+        right: -20px;
+        width: auto;
+        height: 1px;
+        background-color: variables.$color-bg-disabled;
+        content: "";
+      }
+    }
+  }
+
+  &:first-child {
+    @media (min-width: variables.$tablet-width) {
+      grid-column: -1/1;
+    }
+  }
 }

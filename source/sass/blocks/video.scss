@@ -1,15 +1,45 @@
+@use "../sass/variables.scss";
+
 .video {
-  padding: 17px 20px 0;
-  width: 320px;
+  padding-top: 17px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 62px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 66px;
+    padding-bottom: 84px;
+  }
+}
+
+.video-wrapper {
+  padding-left: 28px;
+  padding-right: 28px;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
 
 .video__title {
   margin: 0;
   margin-bottom: 27px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .video__lead {
   margin-bottom: 38px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.video__link {
+  display: block;
+  text-align: center;
 }

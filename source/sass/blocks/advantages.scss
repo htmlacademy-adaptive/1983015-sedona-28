@@ -7,14 +7,12 @@
 
 .advantages__wrapper {
   padding: 0 24px;
+  margin: 0 auto;
   margin-bottom: 32px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 124px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    padding: 0 397px;
+    max-width: 550px;
+    padding: 0;
   }
 }
 
@@ -34,40 +32,32 @@
   list-style-type: none;
 
   @media (min-width: variables.$tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .advantages__item {
-  padding: 24px 32px;
+  padding: 24px 33px;
   background-color: variables.$color-background-advantage;
-
-  &--theme-grey {
-    @media (min-width: variables.$tablet-width) {
-      width: 256px;
-    }
-
-    @media (min-width: variables.$desktop-width) {
-      width: 400px;
-    }
-  }
 
   @media (min-width: variables.$tablet-width) {
     min-height: 256px;
-    padding: 41px 33px;
+    padding-top: 41px;
+    padding-bottom: 41px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 52px 50px;
+    padding: 52px 50px 51px;
   }
 
   &--image {
     padding: 0;
+    color: variables.$one-color;
     background-color: variables.$color-background;
 
     @media (min-width: variables.$tablet-width) {
-      padding: 0;
+      grid-column: -1/1;
     }
   }
 }

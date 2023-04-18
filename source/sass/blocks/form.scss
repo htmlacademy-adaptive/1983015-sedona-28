@@ -1,27 +1,118 @@
 @use "../variables.scss";
 
-.form {
-  padding-left: 20px;
-  padding-bottom: 20px;
+.form__contact {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 58px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    gap: 100px;
+  }
 }
 
 .form__group {
-  width: 320px;
+  position: relative;
   margin: 0;
-  margin-bottom: 39px;
-  padding-top: 24px;
+  padding: 0;
   border: none;
+
+  &:first-child {
+    padding-bottom: 39px;
+  }
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-top: 24px;
+
+  @media (max-width: variables.$mobile-width-only) {
+    &::after {
+      position: absolute;
+      top: 0;
+      left: -20px;
+      right: -20px;
+      width: auto;
+      height: 1px;
+      background-color: variables.$color-bg-disabled;
+      content: "";
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 28px;
+  }
+}
+
+.form__info {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 .form__label {
+  padding-left: 16px;
   text-transform: uppercase;
   color: variables.$three-color;
 }
 
 .form__input {
+  width: auto;
   margin-bottom: 16px;
+  padding: 16px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: variables.$two-color;
+  background-color: variables.$color-bg-body;
+  border: none;
+
+  &::placeholder {
+    color: variables.$color-placeholder;
+  }
+
+  &--phone {
+    position: relative;
+    background-image: url("../img/tel.svg");
+    background-repeat: no-repeat;
+    background-size: 58px 58px;
+    background-position: top right;
+  }
+
+  &--mail {
+    position: relative;
+    margin-bottom: 34px;
+    background-image: url("../img/mail.svg");
+    background-repeat: no-repeat;
+    background-size: 58px 58px;
+    background-position: top right;
+  }
+
+  &--comment {
+    width: 100%;
+    max-width: 768px;
+    min-height: 150px;
+    resize: none;
+  }
 }
 
-.form__buttom {
-  margin: 0 auto;
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__button {
+  width: 100%;
+  align-self: center;
+}
+
+.form__footnote {
+  align-self: flex-end;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: variables.$color-footnote;
 }

@@ -6,11 +6,20 @@
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 60px 155px 55px;
+    padding: 60px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 60px 371px 66px;
+    padding-bottom: 66px;
+  }
+}
+
+.search__wrapper {
+  @media (min-width: variables.$tablet-width) {
+    width: auto;
+    max-width: 435px;
+    margin: 0 auto;
   }
 }
 
@@ -42,10 +51,10 @@
 }
 
 .search__button {
-  width: 284px;
+  min-width: 284px;
   margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
-    width: 458px;
+    min-width: 458px;
   }
 }

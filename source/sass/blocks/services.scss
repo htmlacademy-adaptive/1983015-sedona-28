@@ -35,6 +35,7 @@
 
 .services__description {
   text-align: left;
+  color: variables.$three-color;
 
   @media (min-width: variables.$tablet-width) {
     text-align: center;
