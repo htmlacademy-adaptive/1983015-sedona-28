@@ -4,13 +4,18 @@
 }
 
 .advantages__wrapper {
-  padding: 0 24px;
+  width: auto;
   margin: 0 auto;
-  margin-bottom: 32px;
+  padding: 0 24px;
+  padding-bottom: 16px;
 
   @media (min-width: $tablet-width) {
     max-width: 550px;
-    padding: 0;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 44px;
   }
 }
 

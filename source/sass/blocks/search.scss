@@ -1,9 +1,11 @@
 .search {
+  width: auto;
   padding: 38px 18px 49px;
   text-align: center;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+
     padding: 60px;
     padding-bottom: 55px;
   }
@@ -49,10 +51,11 @@
 }
 
 .search__button {
-  min-width: 284px;
+  width: auto;
   margin: 0 auto;
+  max-width: 284px;
 
   @media (min-width: $tablet-width) {
-    min-width: 458px;
+    max-width: 458px;
   }
 }

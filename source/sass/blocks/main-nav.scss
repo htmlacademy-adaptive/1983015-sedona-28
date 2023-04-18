@@ -106,6 +106,14 @@
   cursor: pointer;
 }
 
+.site-list__item {
+  background-color: $color-background;
+
+  @media (min-width: $tablet-width) {
+    background-color: $one-color;
+  }
+}
+
 .site-list__link {
   display: block;
   padding: 17px 50px 12px;
@@ -116,7 +124,6 @@
   text-transform: uppercase;
   text-align: center;
   color: $one-color;
-  background-color: $color-background;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
   @media (min-width: $tablet-width) {
@@ -127,5 +134,17 @@
     font-size: 14px;
     line-height: 21px;
     box-shadow: none;
+
+    &:hover {
+      color: $color-background;
+    }
+
+    &:active {
+      color: $color-placeholder;
+    }
+
+    &--current {
+      color: $color-current;
+    }
   }
 }
