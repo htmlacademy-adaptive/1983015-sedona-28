@@ -1,23 +1,21 @@
-@use "../variables.scss";
-
 .photo {
   display: flex;
   flex-direction: column;
   padding-top: 24px;
   padding-bottom: 25px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: block;
     padding: 0;
   }
 }
 
 .photo__container {
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     padding: 22px 20px 15px;
-    background-color: variables.$color-bg-body;
+    background-color: $color-bg-body;
   }
 }
 
@@ -26,7 +24,7 @@
   margin-bottom: 15px;
   align-self: center;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: 0;
   }
 }
@@ -35,7 +33,7 @@
   margin: 0;
   font-size: 14px;
   text-transform: uppercase;
-  color: variables.$two-color;
+  color: $two-color;
 }
 
 .photo__autor {
@@ -55,7 +53,7 @@
   border: none;
   cursor: pointer;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     align-self: center;
   }
 }
@@ -67,5 +65,5 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  color: variables.$two-color;
+  color: $two-color;
 }

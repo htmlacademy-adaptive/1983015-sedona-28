@@ -1,14 +1,12 @@
-@use "../sass/variables.scss";
-
 .video {
   padding-top: 17px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding-top: 62px;
     padding-bottom: 40px;
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding-top: 66px;
     padding-bottom: 84px;
   }
@@ -18,7 +16,7 @@
   padding-left: 28px;
   padding-right: 28px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     max-width: 500px;
     margin: 0 auto;
   }
@@ -28,7 +26,7 @@
   margin: 0;
   margin-bottom: 27px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 30px;
   }
 }

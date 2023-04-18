@@ -1,9 +1,7 @@
-@use "../sass/variables.scss";
-
 .services {
-  background-color: variables.$one-color;
+  background-color: $one-color;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -12,12 +10,12 @@
 .services__item {
   padding: 23px 18px 10px 65px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     min-height: 331px;
     padding: 157px 33px 60px;
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: $desktop-width) {
     min-height: 330px;
     padding: 166px 50px 70px;
   }
@@ -28,16 +26,16 @@
   margin-bottom: 16px;
   text-align: left;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     text-align: center;
   }
 }
 
 .services__description {
   text-align: left;
-  color: variables.$three-color;
+  color: $three-color;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     text-align: center;
   }
 }
