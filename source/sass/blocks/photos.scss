@@ -16,8 +16,10 @@
 }
 
 .photos__wrapper {
-  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
   margin-bottom: 25px;
+  text-align: center;
 
   @media (max-width: $mobile-width-only) {
     br {
@@ -26,8 +28,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    max-width: 500px;
-    margin: 0 auto;
     margin-bottom: 67px;
   }
 }

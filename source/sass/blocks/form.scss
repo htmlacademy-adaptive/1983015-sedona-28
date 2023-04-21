@@ -1,8 +1,19 @@
 .form__contact {
   @media (min-width: $tablet-width) {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 58px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      min-height: 338px;
+      content: "";
+      background-color: $color-form-line;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -17,7 +28,33 @@
   border: none;
 
   &:first-child {
-    padding-bottom: 39px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--line {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: -40px;
+        min-width: 123px;
+        height: 1px;
+        content: "";
+        background-color: $color-form-line;
+      }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        top: -40px;
+        min-width: 123px;
+        height: 1px;
+        content: "";
+        background-color: $color-form-line;
+      }
+    }
   }
 }
 
@@ -25,7 +62,24 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  padding-top: 24px;
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 28px;
+    padding-top: 20px;
+  }
+
+  &--controls {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 38px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 55px;
+    }
+  }
 
   @media (max-width: $mobile-width-only) {
     &::after {
@@ -38,10 +92,6 @@
       background-color: $color-bg-disabled;
       content: "";
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 28px;
   }
 }
 
@@ -92,20 +142,45 @@
 
   &--comment {
     width: 100%;
-    max-width: 768px;
     min-height: 150px;
+    margin-bottom: 49px;
     resize: none;
+
+    @media (min-width: $desktop-width) {
+      max-width: 768px;
+      margin-left: 94px;
+      margin-right: 94px;
+    }
   }
 }
+
 
 .form__wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 94px;
+    padding-right: 94px;
+  }
 }
+
 
 .form__button {
   width: 100%;
+  max-width: 324px;
+  margin-bottom: 3px;
   align-self: center;
+
+  @media (min-width: $desktop-width) {
+    max-width: 384px;
+  }
 }
 
 .form__footnote {
@@ -113,4 +188,9 @@
   font-size: 12px;
   text-transform: uppercase;
   color: $color-footnote;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    font-size: 14px;
+  }
 }

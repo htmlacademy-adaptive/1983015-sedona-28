@@ -11,13 +11,10 @@
 }
 
 .video-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
   padding-left: 8px;
   padding-right: 8px;
-
-  @media (min-width: $tablet-width) {
-    max-width: 500px;
-    margin: 0 auto;
-  }
 }
 
 .video__title {
@@ -36,28 +33,7 @@
 }
 
 .video__link {
-  position: relative;
   display: flex;
   justify-content: center;
   text-decoration: none;
-
-  &::before {
-    position: absolute;
-    top: 62px;
-    left: 116px;
-    width: 48px;
-    height: 54px;
-    content: "";
-    background-image: url("../img/polygon.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: $tablet-width) {
-      top: 223px;
-      left: 300px;
-    }
-
-    @media (min-width: $desktop-width) {
-      left: 376px;
-    }
-  }
 }

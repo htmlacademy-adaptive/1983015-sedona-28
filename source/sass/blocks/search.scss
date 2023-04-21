@@ -1,5 +1,4 @@
 .search {
-  width: auto;
   padding: 38px 18px 49px;
   text-align: center;
   text-transform: uppercase;
@@ -16,11 +15,9 @@
 }
 
 .search__wrapper {
-  @media (min-width: $tablet-width) {
-    width: auto;
-    max-width: 435px;
-    margin: 0 auto;
-  }
+  width: auto;
+  max-width: 435px;
+  margin: 0 auto;
 }
 
 .search__title {

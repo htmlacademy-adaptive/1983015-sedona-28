@@ -14,6 +14,7 @@
   display: block;
   margin-bottom: 15px;
   align-self: center;
+  object-fit: contain;
 
   @media (min-width: $tablet-width) {
     margin: 0;

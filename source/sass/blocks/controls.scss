@@ -8,19 +8,37 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  &--impression {
-    @media (min-width: $tablet-width) {
-      gap: 16px;
-      margin-left: 36px;
-      margin-right: 36px;
-    }
-  }
-
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 28px;
+  }
+
+  &--impression {
+    @media (min-width: $tablet-width) {
+      gap: 0 16px;
+      margin-left: 36px;
+      margin-right: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 53px;
+      margin-right: 53px;
+      gap: 28px;
+    }
+  }
+
+  &--sight {
+    @media (min-width: $tablet-width) {
+      gap: 0 32px;
+      margin-left: 84px;
+      margin-right: 84px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 44px;
+      margin-right: 44px;
+      gap: 64px;
+    }
   }
 }
 
