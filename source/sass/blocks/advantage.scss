@@ -1,18 +1,27 @@
-@use "../sass/variables.scss";
-
 .advantage {
   text-align: center;
 }
 
 .advantage__container {
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.advantage__wrapper {
+  padding: 36px 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 52px 33px 31px;
   }
 
   &--town {
-    @media (min-width: variables.$tablet-width) {
-      grid-template-columns: 1fr 2fr;
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+      padding: 52px 50px 51px;
     }
   }
 }
@@ -25,7 +34,7 @@
   line-height: 26px;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 150px;
     margin: 0 auto;
     margin-bottom: 11px;
@@ -34,6 +43,7 @@
 }
 
 .advantage__number {
+  margin: 0;
   margin-bottom: 17px;
 }
 
@@ -44,11 +54,24 @@
 .advantage__image {
   display: block;
   object-fit: contain;
+
+  &--town {
+    @media (min-width: $tablet-width) {
+      grid-column: 2/4;
+    }
+  }
+
+  &--bridge {
+    @media (min-width: $tablet-width) {
+      grid-column: 1/3;
+      grid-row: 1/2;
+    }
+  }
 }
 
 .advantage__service-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background-color: variables.$one-color;
+  background-color: $one-color;
 }

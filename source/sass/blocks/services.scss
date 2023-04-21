@@ -1,23 +1,52 @@
-@use "../sass/variables.scss";
-
 .services {
-  background-color: variables.$one-color;
+  padding-bottom: 44px;
+  background-color: $one-color;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .services__item {
-  padding: 23px 18px 10px 65px;
+  padding: 31px 18px 2px 65px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position: left 18px top 23px;
 
-  @media (min-width: variables.$tablet-width) {
+  &--housing {
+    background-image: url("../img/icon-house.svg");
+
+    @media (min-width: $tablet-width) {
+      background-size: 77px 72px;
+      background-position: center 60px;
+    }
+  }
+
+  &--food {
+    background-image: url("../img/icon-burger.svg");
+
+    @media (min-width: $tablet-width) {
+      background-size: 80px 68px;
+      background-position: center 62px;
+    }
+  }
+
+  &--souvenir {
+    background-image: url("../img/icon-gift.svg");
+
+    @media (min-width: $tablet-width) {
+      background-size: 67px 75px;
+      background-position: center 63px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
     min-height: 331px;
     padding: 157px 33px 60px;
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: $desktop-width) {
     min-height: 330px;
     padding: 166px 50px 70px;
   }
@@ -28,16 +57,17 @@
   margin-bottom: 16px;
   text-align: left;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     text-align: center;
   }
 }
 
 .services__description {
+  margin: 0;
   text-align: left;
-  color: variables.$three-color;
+  color: $three-color;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     text-align: center;
   }
 }

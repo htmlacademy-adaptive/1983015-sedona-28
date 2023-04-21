@@ -1,26 +1,23 @@
-@use "../variables.scss";
-
 .search {
   padding: 38px 18px 49px;
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
+
     padding: 60px;
     padding-bottom: 55px;
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding-bottom: 66px;
   }
 }
 
 .search__wrapper {
-  @media (min-width: variables.$tablet-width) {
-    width: auto;
-    max-width: 435px;
-    margin: 0 auto;
-  }
+  width: auto;
+  max-width: 435px;
+  margin: 0 auto;
 }
 
 .search__title {
@@ -29,14 +26,14 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  color: variables.$two-color;
+  color: $two-color;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 26px;
     font-size: 30px;
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: $desktop-width) {
     line-height: 30px;
   }
 }
@@ -45,16 +42,17 @@
   margin: 0;
   margin-bottom: 32px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 44px;
   }
 }
 
 .search__button {
-  min-width: 284px;
+  width: auto;
   margin: 0 auto;
+  max-width: 284px;
 
-  @media (min-width: variables.$tablet-width) {
-    min-width: 458px;
+  @media (min-width: $tablet-width) {
+    max-width: 458px;
   }
 }

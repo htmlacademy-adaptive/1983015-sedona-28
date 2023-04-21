@@ -1,18 +1,21 @@
-@use "../sass/variables.scss";
-
 .advantages {
-  padding-top: 32px;
+  width: auto;
+  padding-top: 34px;
   text-transform: uppercase;
 }
 
 .advantages__wrapper {
-  padding: 0 24px;
+  max-width: 550px;
   margin: 0 auto;
-  margin-bottom: 32px;
+  padding: 0 24px;
+  padding-bottom: 38px;
 
-  @media (min-width: variables.$tablet-width) {
-    max-width: 550px;
-    padding: 0;
+  @media (min-width: $tablet-width) {
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 44px;
   }
 }
 
@@ -31,32 +34,57 @@
   padding: 0;
   list-style-type: none;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .advantages__item {
+  position: relative;
   padding: 24px 33px;
-  background-color: variables.$color-background-advantage;
+  background-color: $color-background-advantage;
 
-  @media (min-width: variables.$tablet-width) {
+  &:first-child {
+    @media (max-width: $mobile-width-only) {
+      background-image: url("../../img/whitecopy.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: top 0 center;
+    }
+  }
+
+  &--theme-gray:not(:last-child) {
+    @media (max-width: $mobile-width-only) {
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 18px;
+        right: 18px;
+        width: auto;
+        height: 1px;
+        background-color: $color-theme-gray;
+        content: "";
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
     min-height: 256px;
     padding-top: 41px;
     padding-bottom: 41px;
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 52px 50px 51px;
   }
 
   &--image {
     padding: 0;
-    color: variables.$one-color;
-    background-color: variables.$color-background;
+    color: $one-color;
+    background-color: $color-background;
 
-    @media (min-width: variables.$tablet-width) {
+    @media (min-width: $tablet-width) {
       grid-column: -1/1;
     }
   }

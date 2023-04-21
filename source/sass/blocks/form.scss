@@ -1,13 +1,22 @@
-@use "../variables.scss";
-
 .form__contact {
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 58px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      min-height: 338px;
+      content: "";
+      background-color: $color-form-line;
+    }
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: $desktop-width) {
     gap: 100px;
   }
 }
@@ -19,7 +28,33 @@
   border: none;
 
   &:first-child {
-    padding-bottom: 39px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--line {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: -40px;
+        min-width: 123px;
+        height: 1px;
+        content: "";
+        background-color: $color-form-line;
+      }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        top: -40px;
+        min-width: 123px;
+        height: 1px;
+        content: "";
+        background-color: $color-form-line;
+      }
+    }
   }
 }
 
@@ -27,9 +62,26 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  padding-top: 24px;
+  padding-top: 25px;
 
-  @media (max-width: variables.$mobile-width-only) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 28px;
+    padding-top: 20px;
+  }
+
+  &--controls {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 38px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 55px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
     &::after {
       position: absolute;
       top: 0;
@@ -37,13 +89,9 @@
       right: -20px;
       width: auto;
       height: 1px;
-      background-color: variables.$color-bg-disabled;
+      background-color: $color-bg-disabled;
       content: "";
     }
-  }
-
-  @media (min-width: variables.$tablet-width) {
-    margin-bottom: 28px;
   }
 }
 
@@ -56,7 +104,7 @@
 .form__label {
   padding-left: 16px;
   text-transform: uppercase;
-  color: variables.$three-color;
+  color: $three-color;
 }
 
 .form__input {
@@ -67,12 +115,12 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  color: variables.$two-color;
-  background-color: variables.$color-bg-body;
+  color: $two-color;
+  background-color: $color-bg-body;
   border: none;
 
   &::placeholder {
-    color: variables.$color-placeholder;
+    color: $color-placeholder;
   }
 
   &--phone {
@@ -94,25 +142,55 @@
 
   &--comment {
     width: 100%;
-    max-width: 768px;
     min-height: 150px;
+    margin-bottom: 49px;
     resize: none;
+
+    @media (min-width: $desktop-width) {
+      max-width: 768px;
+      margin-left: 94px;
+      margin-right: 94px;
+    }
   }
 }
+
 
 .form__wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 94px;
+    padding-right: 94px;
+  }
 }
+
 
 .form__button {
   width: 100%;
+  max-width: 324px;
+  margin-bottom: 3px;
   align-self: center;
+
+  @media (min-width: $desktop-width) {
+    max-width: 384px;
+  }
 }
 
 .form__footnote {
   align-self: flex-end;
   font-size: 12px;
   text-transform: uppercase;
-  color: variables.$color-footnote;
+  color: $color-footnote;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    font-size: 14px;
+  }
 }

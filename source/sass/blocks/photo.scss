@@ -1,23 +1,12 @@
-@use "../variables.scss";
-
 .photo {
   display: flex;
   flex-direction: column;
   padding-top: 24px;
   padding-bottom: 25px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: block;
     padding: 0;
-  }
-}
-
-.photo__container {
-  @media (min-width: variables.$tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    padding: 22px 20px 15px;
-    background-color: variables.$color-bg-body;
   }
 }
 
@@ -25,9 +14,31 @@
   display: block;
   margin-bottom: 15px;
   align-self: center;
+  object-fit: contain;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.photo__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 20px 15px;
+    background-color: $color-bg-body;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-placeholder;
   }
 }
 
@@ -35,12 +46,20 @@
   margin: 0;
   font-size: 14px;
   text-transform: uppercase;
-  color: variables.$two-color;
+  color: $two-color;
+
+  @media (min-width: $desktop-width) {
+    color: $one-color;
+  }
 }
 
 .photo__autor {
   margin: 0;
   margin-bottom: 11px;
+
+  @media (min-width: $desktop-width) {
+    color: $one-color;
+  }
 }
 
 .photo__button {
@@ -52,11 +71,16 @@
   background-image: url("../img/like-icon.svg");
   background-repeat: no-repeat;
   background-color: transparent;
+  color: $color-placeholder;
   border: none;
   cursor: pointer;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $one-color;
   }
 }
 
@@ -67,5 +91,9 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  color: variables.$two-color;
+  color: $two-color;
+
+  @media (min-width: $desktop-width) {
+    color: $one-color;
+  }
 }

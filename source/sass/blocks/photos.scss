@@ -1,16 +1,14 @@
-@use "../variables.scss";
-
 .photos {
   width: auto;
   padding-top: 37px;
   padding-left: 20px;
   padding-right: 20px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 67px 60px;
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0;
     padding-top: 100px;
     padding-bottom: 67px;
@@ -18,18 +16,18 @@
 }
 
 .photos__wrapper {
-  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
   margin-bottom: 25px;
+  text-align: center;
 
-  @media (max-width: variables.$mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     br {
       display: none;
     }
   }
 
-  @media (min-width: variables.$tablet-width) {
-    max-width: 500px;
-    margin: 0 auto;
+  @media (min-width: $tablet-width) {
     margin-bottom: 67px;
   }
 }
@@ -38,7 +36,7 @@
   margin: 0;
   margin-bottom: 25px;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 30px;
   }
 }
@@ -52,13 +50,13 @@
   padding: 0;
   list-style-type: none;
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
   }
 
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -66,7 +64,7 @@
 .photos__item {
   position: relative;
 
-  @media (max-width: variables.$mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     &::before {
       position: absolute;
       top: 0;
@@ -74,7 +72,7 @@
       right: -20px;
       width: auto;
       height: 1px;
-      background-color: variables.$color-bg-disabled;
+      background-color: $color-bg-disabled;
       content: "";
     }
   }
@@ -82,7 +80,7 @@
   &:last-child {
     position: relative;
 
-    @media (max-width: variables.$mobile-width-only) {
+    @media (max-width: $mobile-width-only) {
       &::after {
         position: absolute;
         bottom: 0;
@@ -90,14 +88,14 @@
         right: -20px;
         width: auto;
         height: 1px;
-        background-color: variables.$color-bg-disabled;
+        background-color: $color-bg-disabled;
         content: "";
       }
     }
   }
 
   &:first-child {
-    @media (min-width: variables.$tablet-width) {
+    @media (min-width: $tablet-width) {
       grid-column: -1/1;
     }
   }
