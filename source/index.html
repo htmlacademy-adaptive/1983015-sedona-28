@@ -38,7 +38,11 @@
         <h1 class="visually-hidden">Сайт города Седона</h1>
         <section class="hero">
           <h2 class="visually-hidden">Седона - городок в Аризоне</h2>
-          <img class="hero__slogan" src="img/text-index.svg" alt="Добро пожаловать в Седону." width="282" height="214">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/text-index-dekstop.svg" width="460" height="350">
+            <source media="(min-width: 768px)" srcset="img/text-index-tablet.svg" width="461" height="350">
+            <img class="hero__slogan" src="img/text-index.svg" alt="Добро пожаловать в Седону." width="282" height="214">
+          </picture>
         </section>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества</h2>
