@@ -1,7 +1,7 @@
 .photo {
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
+  padding-top: 25px;
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
@@ -12,9 +12,10 @@
 
 .photo__image {
   display: block;
+  width: 100%;
   margin-bottom: 15px;
   align-self: center;
-  object-fit: contain;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     margin: 0;

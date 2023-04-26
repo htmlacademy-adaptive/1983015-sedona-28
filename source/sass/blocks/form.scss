@@ -4,10 +4,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 58px;
+    margin-bottom: 25px;
 
     &::after {
       position: absolute;
-      top: 0;
+      top: -7px;
       left: 50%;
       width: 1px;
       min-height: 338px;
@@ -30,35 +31,10 @@
   &:first-child {
     padding-bottom: 23px;
   }
-
-  @media (min-width: $tablet-width) {
-    &--line {
-      position: relative;
-
-      &::before {
-        position: absolute;
-        left: 0;
-        top: -40px;
-        min-width: 123px;
-        height: 1px;
-        content: "";
-        background-color: $color-form-line;
-      }
-
-      &::after {
-        position: absolute;
-        right: 0;
-        top: -40px;
-        min-width: 123px;
-        height: 1px;
-        content: "";
-        background-color: $color-form-line;
-      }
-    }
-  }
 }
 
 .form__title {
+  position: relative;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -66,7 +42,41 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 28px;
-    padding-top: 20px;
+    padding: 0;
+
+    &--line {
+      min-width: 400px;
+      padding: 0 20px;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 19%;
+        height: 1px;
+        min-width: 123px;
+        content: "";
+        background-color: $color-form-line;
+
+        @media (min-width: $desktop-width) {
+          width: 30%;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        min-width: 19%;
+        height: 1px;
+        content: "";
+        background-color: $color-form-line;
+
+        @media (min-width: $desktop-width) {
+          width: 30%;
+        }
+      }
+    }
   }
 
   &--controls {
@@ -146,6 +156,11 @@
     margin-bottom: 49px;
     resize: none;
 
+    @media (min-width: $tablet-width) {
+      min-height: 160px;
+      margin-bottom: 34px;
+    }
+
     @media (min-width: $desktop-width) {
       max-width: 768px;
       margin-left: 94px;
@@ -153,7 +168,6 @@
     }
   }
 }
-
 
 .form__wrapper {
   display: flex;
@@ -170,7 +184,6 @@
     padding-right: 94px;
   }
 }
-
 
 .form__button {
   width: 100%;
