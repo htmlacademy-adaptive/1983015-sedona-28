@@ -52,13 +52,19 @@
           </div>
           <ol class="advantages__list">
             <li class="advantages__item advantages__item--image advantage">
-              <div class="advantage__container advantage__container--town">
+              <div class="advantage__container">
                 <div class="advantage__wrapper advantage__wrapper--town">
                   <h3 class="advantage__title">Настоящий городок</h3>
                   <p class="advantage__number">— №1 —</p>
                   <p class="advantage__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
                 </div>
-                <img class="advantage__image advantage__image--town" src="img/photo-city.jpg" alt="Домики на фоне гор." width="520" height="260">
+                <div class="advantage__picture advantage__picture--town">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-city-desktop@1x.jpg 1x, img/photo-city-desktop@2x.jpg 2x" width="800" height="256">
+                    <source media="(min-width: 768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x" width="512" height="256">
+                    <img class="advantage__image" src="img/photo-city-phone@1x.jpg" srcset="img/photo-city-phone@2x.jpg 2x" width="320" height="260" alt="Домики на фоне гор.">
+                  </picture>
+                </div>
               </div>
               <ul class="advantage__service-list services">
                 <li class="services__item services__item--housing">
@@ -78,11 +84,17 @@
             <li class="advantages__item advantages__item--image advantage">
               <div class="advantage__container">
                 <div class="advantage__wrapper">
-                  <h3 class="advantage__title">Там есть мост дьявола</h3>
+                  <h3 class="advantage__title">Там есть<br> мост дьявола</h3>
                   <p class="advantage__number">— №2 —</p>
                   <p class="advantage__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
                 </div>
-                <img class="advantage__image advantage__image--bridge" src="img/photo-bridge.jpg" alt="Горы и каньон." width="520" height="260">
+                <div class="advantage__picture advantage__picture--bridge">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x" width="800" height="256">
+                    <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg2x" width="512" height="256">
+                    <img class="advantage__image" src="img/photo-bridge-phone@1x.jpg" srcset="img/photo-bridge-phone@2x.jpg 2x" width="320" height="260" alt="Горы и каньон.">
+                  </picture>
+                </div>
               </div>
             </li>
             <li class="advantages__item advantages__item--theme-gray advantage">

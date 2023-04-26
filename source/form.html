@@ -37,7 +37,11 @@
       <main class="main-form">
         <h1 class="visually-hidden">Отзывы о городе Седона</h1>
         <div class="hero-inner">
-          <img class="hero-inner__image" src="img/sedona.svg" alt="Седона." width="229" height="39">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/sedona-desktop.svg" width="460" height="80">
+            <source media="(min-width: 768px)" srcset="img/sedona-tablet.svg" width="457" height="78">
+            <img class="hero-inner__image" src="img/sedona.svg" alt="Седона." width="229" height="39">
+          </picture>
         </div>
         <section class="review">
           <h2 class="review__title title">Оставьте свой отзыв</h2>
@@ -71,10 +75,10 @@
                 </p>
               </fieldset>
             </div>
-            <fieldset class="form__group form__group--line controls">
-              <legend class="form__title form__title--controls title">Ваше общее впечатление:</legend>
+            <div class="form__group controls">
+              <div class="form__title form__title--line form__title--controls title">Ваше общее впечатление:</div>
               <ul class="controls__list controls__list--impression">
-                <li class="controls__item controls__item--impression">
+                <li class="controls__item">
                   <label class="controls__label control">
                   <input class="visually-hidden control__input" type="radio" name="impression" value="positive" checked>
                   <span class="control__mark"></span>
@@ -96,11 +100,11 @@
                   </label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__group form__group--line controls">
-              <legend class="form__title form__title--controls title">Посещенные<br> достопримечательности:</legend>
+            </div>
+            <div class="form__group controls">
+              <div class="form__title form__title--line form__title--controls title">Посещенные<br> достопримечательности:</div>
               <ul class="controls__list controls__list--sight">
-                <li class="controls__item controls__item--sight">
+                <li class="controls__item">
                   <label class="controls__label control">
                     <input class="visually-hidden control__input" type="checkbox" name="devil's-bridge" checked>
                     <span class="control__mark"></span>
@@ -129,11 +133,11 @@
                   </label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__group form__group--line">
-              <legend class="form__title title">Опишите свои эмоции:</legend>
+            </div>
+            <div class="form__group">
+              <div class="form__title form__title--line title">Опишите свои эмоции:</div>
               <textarea class="form__input form__input--comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
-            </fieldset>
+            </div>
             <div class="form__wrapper">
               <button class="form__button button" type="submit">Отправить отзыв</button>
               <span class="form__footnote">* — обязательные поля</span>

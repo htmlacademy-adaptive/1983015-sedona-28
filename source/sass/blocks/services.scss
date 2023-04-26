@@ -1,5 +1,4 @@
 .services {
-  padding-bottom: 44px;
   background-color: $one-color;
 
   @media (min-width: $tablet-width) {
@@ -18,7 +17,7 @@
     background-image: url("../img/icon-house.svg");
 
     @media (min-width: $tablet-width) {
-      background-size: 77px 72px;
+      background-size: 78px 72px;
       background-position: center 60px;
     }
   }

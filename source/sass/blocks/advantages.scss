@@ -4,7 +4,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    padding-top: 48px;
+    padding-top: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -29,7 +29,11 @@
 
 .advantages__lead {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .advantages__text {
@@ -62,8 +66,8 @@
     }
   }
 
-  &--theme-gray:not(:last-child) {
-    @media (max-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
+    &--theme-gray:not(:last-child) {
       &::after {
         position: absolute;
         bottom: 0;
@@ -74,6 +78,11 @@
         background-color: $color-theme-gray;
         content: "";
       }
+    }
+
+    &:last-child {
+      padding-top: 25px;
+      padding-bottom: 28px;
     }
   }
 
