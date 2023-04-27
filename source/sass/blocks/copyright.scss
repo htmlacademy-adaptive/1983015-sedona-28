@@ -1,17 +1,22 @@
-.copyright {
+.copyright__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  text-decoration: none;
+  color: $two-color;
+
+  &:hover {
+    color: $color-background;
+  }
+
+  &:active {
+    color: $color-academy-active;
+  }
 }
 
 .copyright__text {
   margin-right: 12px;
   font-weight: 400;
   text-transform: uppercase;
-  color: $two-color;
-}
-
-.copyright__link {
-  display: block;
+  vertical-align: middle;
 }

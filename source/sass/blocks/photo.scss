@@ -30,7 +30,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 22px 20px 15px;
+    padding: 23px 20px 15px;
     background-color: $color-bg-body;
   }
 
@@ -39,7 +39,14 @@
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 22px 20px 15px 21px;
     background-color: $color-placeholder;
+  }
+
+  &--small {
+    @media (min-width: $desktop-width) {
+      padding: 17px 20px 17px 25px;
+    }
   }
 }
 
@@ -58,26 +65,8 @@
   margin: 0;
   margin-bottom: 11px;
 
-  @media (min-width: $desktop-width) {
-    color: $one-color;
-  }
-}
-
-.photo__button {
-  display: flex;
-  padding: 0;
-  min-width: 50px;
-  min-height: 26px;
-  font-family: inherit;
-  background-image: url("../img/like-icon.svg");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  color: $color-placeholder;
-  border: none;
-  cursor: pointer;
-
   @media (min-width: $tablet-width) {
-    align-self: center;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -86,13 +75,43 @@
 }
 
 .photo__likes {
+  @media (min-width: $tablet-width) {
+    padding-top: 5px;
+  }
+}
+
+.photo__button {
+  display: flex;
+  padding: 0;
+  min-width: 50px;
+  height: 26px;
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.photo__icon {
+  fill: $color-placeholder;
+
+  @media (min-width: $desktop-width) {
+    fill: $one-color;
+  }
+}
+
+.photo__quantity {
   align-self: flex-end;
-  padding-left: 37px;
+  margin-left: 14px;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   color: $two-color;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 9px;
+  }
+
 
   @media (min-width: $desktop-width) {
     color: $one-color;
