@@ -21,6 +21,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 24px 24px;
+
+  :hover {
+    background-color: $color-bg-hover;
+  }
+
+  :active {
+    background-color: $color-bg-down;
+    opacity: 0.3;
+  }
 }
 
 .social__link--vkontakte {

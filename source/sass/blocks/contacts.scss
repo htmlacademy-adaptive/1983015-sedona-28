@@ -1,4 +1,6 @@
 .contacts {
+  padding: 0;
+  padding-bottom: 8px;
   background-color: $color-bg-under;
   background-image: url("../img/map-mobile.jpg");
   background-size: 320px 350px;
@@ -6,6 +8,7 @@
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     background-size: 768px 350px;
   }
 
