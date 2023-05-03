@@ -35,7 +35,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    width: 150px;
+    width: 155px;
     margin: 0 auto;
     margin-bottom: 14px;
     font-size: 21px;
@@ -84,6 +84,7 @@
   &--town {
     @media (min-width: $tablet-width) {
       grid-column: 2/4;
+      object-fit: cover;
     }
   }
 
@@ -100,7 +101,6 @@
   width: 100%;
   min-width: 320px;
   height: 260px;
-  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     min-width: 512px;

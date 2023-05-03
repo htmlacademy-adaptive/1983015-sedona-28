@@ -14,13 +14,15 @@
 
   &--impression {
     @media (min-width: $tablet-width) {
-      gap: 0 16px;
+      gap: 36px 16px;
       margin-left: 36px;
       margin-right: 36px;
-      margin-bottom: 25px;
+      margin-bottom: 58px;
     }
 
     @media (min-width: $desktop-width) {
+      justify-content: space-between;
+      margin-bottom: 85px;
       padding-left: 18px;
       padding-right: 18px;
     }
@@ -28,16 +30,17 @@
 
   &--sight {
     @media (min-width: $tablet-width) {
-      gap: 0 32px;
+      gap: 36px 32px;
       margin-left: 84px;
       margin-right: 84px;
-      margin-bottom: 16px;
+      margin-bottom: 40px;
     }
 
     @media (min-width: $desktop-width) {
+      gap: 64px;
       margin-left: 44px;
       margin-right: 44px;
-      gap: 64px;
+      margin-bottom: 82px;
     }
   }
 }

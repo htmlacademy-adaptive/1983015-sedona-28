@@ -13,7 +13,7 @@
   <body class="page__body">
     <div class="page__container">
       <header class="main-header">
-        <a class="main-header__logo logo" href="index.html">
+        <a class="main-header__logo logo logo__inner" href="index.html">
           <img src="img/logo.svg" alt="Логотип сайта о городе Седона." width="185" height="96">
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -53,7 +53,7 @@
           <form class="review__form form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form__contact">
               <fieldset class="form__group">
-                <legend class="form__title title">Представьтесь:</legend>
+                <h3 class="form__title title">Представьтесь:</h3>
                 <p class="form__info">
                   <label class="form__label" for="name">Имя*:</label>
                   <input class="form__input" type="text" id="name" name="first-name" value="Пётр" required>
@@ -68,7 +68,7 @@
                 </p>
               </fieldset>
               <fieldset class="form__group">
-                <legend class="form__title title">Контактная информация:</legend>
+                <h3 class="form__title title">Контактная информация:</h3>
                 <p class="form__info">
                   <label class="form__label" for="tel">Контактный телефон*:</label>
                   <input class="form__input form__input--phone" type="tel" id="tel" name="tel" placeholder="Введите телефон" required>
@@ -79,34 +79,34 @@
                 </p>
               </fieldset>
             </div>
-            <div class="form__group controls">
-              <div class="form__title form__title--line form__title--controls title">Ваше общее впечатление:</div>
+            <fieldset class="form__group form__group--line controls">
+              <h3 class="form__title form__title--controls form__title--line title">Ваше общее впечатление:</h3>
               <ul class="controls__list controls__list--impression">
-                <li class="controls__item">
+                <li class="controls__item controls__item--impression">
                   <label class="controls__label control">
                   <input class="visually-hidden control__input" type="radio" name="impression" value="positive" checked>
                   <span class="control__mark"></span>
                   <span class="control__text">Скорее положительное</span>
                   </label>
                 </li>
-                <li class="controls__item">
+                <li class="controls__item controls__item--impression">
                   <label class="controls__label control">
                     <input class="visually-hidden control__input" type="radio" name="impression" value="negative">
                     <span class="control__mark"></span>
                     <span class="control__text">Скорее отрицательное</span>
                   </label>
                 </li>
-                <li class="controls__item">
+                <li class="controls__item controls__item--impression">
                   <label class="controls__label control">
-                    <input class="visually-hidden control__input" type="radio" name="impression" value="difficult">
+                    <input class="visually-hidden control__input" type="radio" name="impression" value="difficult" disabled>
                     <span class="control__mark"></span>
                     <span class="control__text">Затрудняюсь ответить</span>
                   </label>
                 </li>
               </ul>
-            </div>
-            <div class="form__group controls">
-              <div class="form__title form__title--line form__title--controls title">Посещенные<br> достопримечательности:</div>
+            </fieldset>
+            <fieldset class="form__group form__group--line controls">
+              <h3 class="form__title form__title--controls form__title--sight title">Посещенные<br> достопримечательности:</h3>
               <ul class="controls__list controls__list--sight">
                 <li class="controls__item">
                   <label class="controls__label control">
@@ -115,21 +115,21 @@
                     <span class="control__text">Мост Дьявола</span>
                   </label>
                 </li>
-                <li class="controls__item controls__item--sight">
+                <li class="controls__item">
                   <label class="controls__label control">
                     <input class="visually-hidden control__input" type="checkbox" name="mount-bell" checked>
                     <span class="control__mark"></span>
                     <span class="control__text">Гора-Колокол</span>
                   </label>
                 </li>
-                <li class="controls__item controls__item--sight">
+                <li class="controls__item">
                   <label class="controls__label control">
                     <input class="visually-hidden control__input" type="checkbox" name="slide-park" checked>
                     <span class="control__mark"></span>
                     <span class="control__text">Слайд-парк</span>
                   </label>
                 </li>
-                <li class="controls__item controls__item--sight">
+                <li class="controls__item">
                   <label class="controls__label control">
                     <input class="visually-hidden control__input" type="checkbox" name="red-rocks">
                     <span class="control__mark"></span>
@@ -137,9 +137,9 @@
                   </label>
                 </li>
               </ul>
-            </div>
-            <div class="form__group">
-              <div class="form__title form__title--line title">Опишите свои эмоции:</div>
+            </fieldset>
+            <div class="form__group form__group--line">
+              <h3 class="form__title form__title--line title">Опишите свои эмоции:</h3>
               <textarea class="form__input form__input--comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
             <div class="form__wrapper">
@@ -180,18 +180,24 @@
           </a>
         </div>
       </footer>
-      <div class="modal">
-        <div class="modal__error modal__error--close">
-        <h2 class="modal__title title">Что-то пошло не так!</h2>
-        <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="modal__button button" type="button">Ок</button>
+      <div class="modal modal__container modal__container--sent-close">
+        <div class="modal__review modal__review--sent">
+          <div class="modal__text modal__text--sent">
+            <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
+            <p class="modal__description modal__description--sent">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте</p>
+          </div>
+          <div class="modal__wrapper">
+            <button class="modal__button button" type="button">Закрыть окно</button>
+          </div>
         </div>
       </div>
-      <div class="modal">
-        <div class="modal__sent modal__sent--close">
-          <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
-          <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте</p>
-          <button class="modal__button button" type="button">Закрыть окно</button>
+      <div class="modal modal__container modal__container--error-close">
+        <div class="modal__review modal__review--error">
+        <div class="modal__text modal__text--error">
+          <h2 class="modal__title title">Что-то пошло не&nbsp;так!</h2>
+          <p class="modal__description modal__description--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
+        <button class="modal__button modal__button--error button" type="button">Ок</button>
         </div>
       </div>
     </div>

@@ -12,4 +12,17 @@
   background-color: $color-background;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-bg-hover;
+  }
+
+  &:active {
+    color: $color-active;
+    background-color: $color-bg-down;
+  }
+
+  &:disabled {
+    background-color: $color-bg-disabled;
+  }
 }
