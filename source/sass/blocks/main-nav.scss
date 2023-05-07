@@ -110,6 +110,11 @@
   background-color: $color-background;
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 153px;
+    min-height: 56px;
     background-color: $one-color;
   }
 }

@@ -89,6 +89,14 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-academy-active;
+  }
+
+  &:active {
+    background-color: $color-bg-down;
+  }
 }
 
 .photo__icon {
