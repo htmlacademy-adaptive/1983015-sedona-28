@@ -48,3 +48,20 @@
   background-repeat: no-repeat;
   content: "";
 }
+
+.control__mark:hover {
+  background-color: $color-bg-disabled;
+}
+
+.control__input:focus + .control__mark {
+  outline: 2px solid $two-color;
+}
+
+.control__mark:disabled {
+  opacity: 0.1;
+}
+
+.control__mark:active::before {
+  background-color: $color-radio-down;
+  opacity: 0.3;
+}

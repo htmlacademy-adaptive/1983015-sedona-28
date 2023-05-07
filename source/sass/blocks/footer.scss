@@ -4,11 +4,11 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 33px 82px;
+  padding: 33px 82px 32px;
 
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    justify-content: space-between;
     padding: 36px 60px;
   }
 
@@ -25,23 +25,4 @@
   line-height: 26px;
   text-transform: uppercase;
   color: $two-color;
-
-  @media (min-width: $tablet-width) {
-    justify-self: start;
-    align-self: center;
-  }
-}
-
-.footer__social {
-  @media (min-width: $tablet-width) {
-    justify-self: center;
-    align-self: center;
-  }
-}
-
-.footer__copyright {
-  @media (min-width: $tablet-width) {
-    justify-self: end;
-    align-self: center;
-  }
 }

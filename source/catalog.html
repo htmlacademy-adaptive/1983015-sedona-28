@@ -13,7 +13,7 @@
   <body class="page__body">
     <div class="page__container">
       <header class="main-header">
-        <a class="main-header__logo logo" href="index.html">
+        <a class="main-header__logo logo logo__inner" href="index.html">
           <img src="img/logo.svg" alt="Логотип сайта о городе Седона." width="185" height="96">
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -64,11 +64,16 @@
                   <h3 class="photo__subtitle">Неродные просторы</h3>
                   <p class="photo__autor">Автор фото: Борис</p>
                 </div>
-              <button class="photo__button" type="button">
-                <span class="visually-hidden">Поставить лайк.</span>
-                <span class="photo__likes">1350</span>
-              </button>
-            </div>
+                <div class="photo__likes">
+                  <button class="photo__button" type="button">
+                    <span class="visually-hidden">Поставить лайк.</span>
+                    <svg class="photo__icon" width="23" height="21">
+                      <use xlink:href="img/sprite.svg#like-icon"></use>
+                    </svg>
+                    <span class="photo__quantity">1350</span>
+                  </button>
+                </div>
+              </div>
             </li>
             <li class="photos__item photo">
               <picture>
@@ -76,32 +81,42 @@
                 <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x" width="324" height="267">
                 <img class="photo__image" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Цветы в горах." width="280" height="280">
               </picture>
-              <div class="photo__container">
+              <div class="photo__container photo__container--small">
                 <div class="photo__wrapper">
                   <h3 class="photo__subtitle">Местная растительность</h3>
                   <p class="photo__autor">Автор фото: Сергей</p>
                 </div>
-                <button class="photo__button" type="button">
-                  <span class="visually-hidden">Поставить лайк.</span>
-                  <span class="photo__likes">143</span>
-                </button>
+                <div class="photo__likes">
+                  <button class="photo__button" type="button">
+                    <span class="visually-hidden">Поставить лайк.</span>
+                    <svg class="photo__icon" width="23" height="21">
+                      <use xlink:href="img/sprite.svg#like-icon"></use>
+                    </svg>
+                    <span class="photo__quantity">143</span>
+                  </button>
+                </div>
               </div>
             </li>
             <li class="photos__item photo">
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, photo-3-desktop@2x.jpg 2x" width="400" height="267">
-                <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x" width=324" height="267">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x" width="324" height="267">
                 <img class="photo__image" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Дорога в лесу." width="280" height="280">
               </picture>
-              <div class="photo__container">
+              <div class="photo__container photo__container--small">
                 <div class="photo__wrapper">
                   <h3 class="photo__subtitle">Дорога на север</h3>
                   <p class="photo__autor">Автор фото: Петр</p>
                 </div>
-                <button class="photo__button" type="button">
-                  <span class="visually-hidden">Поставить лайк.</span>
-                  <span class="photo__likes">96</span>
-                </button>
+                <div class="photo__likes">
+                  <button class="photo__button" type="button">
+                    <span class="visually-hidden">Поставить лайк.</span>
+                    <svg class="photo__icon" width="23" height="21">
+                      <use xlink:href="img/sprite.svg#like-icon"></use>
+                    </svg>
+                    <span class="photo__quantity">96</span>
+                  </button>
+                </div>
               </div>
             </li>
             <li class="photos__item photo">
@@ -110,15 +125,20 @@
                 <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x" width="324" height="267">
                 <img class="photo__image" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Горы и каньон." width="280" height="280">
               </picture>
-              <div class="photo__container">
+              <div class="photo__container photo__container--small">
                 <div class="photo__wrapper">
                   <h3 class="photo__subtitle">Мост дьявола</h3>
                   <p class="photo__autor">Автор фото: Антон</p>
                 </div>
-                <button class="photo__button" type="button">
-                  <span class="visually-hidden">Поставить лайк.</span>
-                  <span class="photo__likes">254</span>
-                </button>
+                <div class="photo__likes">
+                  <button class="photo__button" type="button">
+                    <span class="visually-hidden">Поставить лайк.</span>
+                    <svg class="photo__icon" width="23" height="21">
+                      <use xlink:href="img/sprite.svg#like-icon"></use>
+                    </svg>
+                    <span class="photo__quantity">254</span>
+                  </button>
+                </div>
               </div>
             </li>
           </ul>
@@ -160,10 +180,10 @@
           </ul>
         </div>
         <div class="footer__copyright copyright">
-          <span class="copyright__text">Разработано</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg role="img" aria-label="Логотип сайта разработчика htmlacademy" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.65 0.449951H13.55L0.0500031 1.84995V26.55L13.55 34.5499L26.95 26.55V1.84995L13.65 0.449951ZM25.05 12.55L13.55 5.74995V5.64995H13.45L13.35 5.54995V5.64995L1.95 12.55V3.54995L13.45 2.34995L25.05 3.54995V12.55ZM13.45 7.24995L24.95 13.95L20.45 16.55L13.35 12.35V13.75L19.25 17.25L18.35 17.75L13.35 14.75V16.15L17.15 18.45L16.35 18.95L13.35 17.15V18.55L15.25 19.65L13.45 20.75L2.05 14.05L13.45 7.24995ZM1.95 15.55L13.35 22.35V23.35L5.45 18.65V20.05L13.45 24.85V25.95L5.45 21.25V22.65L13.45 27.45L21.55 22.55V17.35L24.95 15.35V25.35L13.45 32.25L1.95 25.45V15.55Z" fill="black"/>
+            <span class="copyright__text">Разработано</span>
+            <svg  width="27" height="35">
+              <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
             </svg>
           </a>
         </div>
