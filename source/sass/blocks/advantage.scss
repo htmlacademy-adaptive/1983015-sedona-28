@@ -78,6 +78,17 @@
       margin: 0 auto;
     }
   }
+
+  &--road {
+    @media (min-width: $tablet-width) {
+      max-width: 180px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 300px;
+    }
+  }
 }
 
 .advantage__picture {
