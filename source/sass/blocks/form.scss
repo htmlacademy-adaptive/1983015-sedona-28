@@ -148,17 +148,14 @@
 
   &--phone {
     position: relative;
-    padding-right: 74px;
     background-image: url("../img/tel.svg");
     background-repeat: no-repeat;
     background-size: 58px 58px;
     background-position: top right;
-
   }
 
   &--mail {
     position: relative;
-    padding-right: 74px;
     margin-bottom: 34px;
     background-image: url("../img/mail.svg");
     background-repeat: no-repeat;
@@ -228,7 +225,8 @@
   color: $color-footnote;
 
   @media (min-width: $tablet-width) {
-    align-self: center;
+    align-self: flex-start;
+    padding-top: 23px;
     font-size: 14px;
   }
 }
