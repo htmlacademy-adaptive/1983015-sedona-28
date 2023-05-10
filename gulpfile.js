@@ -98,7 +98,6 @@ const clean = () => {
 };
 
 // Server
-
 const server = (done) => {
   browser.init({
     server: {
@@ -112,14 +111,12 @@ const server = (done) => {
 }
 
 // Reload
-
 const reload = (done) => {
   browser.reload();
   done();
   }
 
 // Watcher
-
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
@@ -127,7 +124,6 @@ const watcher = () => {
 }
 
 //Build
-
 export const build = gulp.series(
   clean,
   copy,
@@ -143,7 +139,6 @@ export const build = gulp.series(
 );
 
 //Default
-
 export default gulp.series(
   clean,
   copy,
