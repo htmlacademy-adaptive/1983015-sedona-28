@@ -63,7 +63,7 @@
 
   &:first-child {
     @media (max-width: $mobile-width-only) {
-      background-image: url("../../img/whitecopy.svg");
+      background-image: url("../img/whitecopy.svg");
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: top 0 center;
