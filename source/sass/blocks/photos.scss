@@ -20,18 +20,21 @@
   margin-bottom: 38px;
   text-align: center;
 
-  @media (max-width: $mobile-width-only) {
-    br {
-      display: none;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 80px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 88px;
+  }
+}
+
+.photos__space {
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "\A";
+      white-space: pre;
+    }
   }
 }
 

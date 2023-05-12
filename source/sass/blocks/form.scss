@@ -1,17 +1,20 @@
 .form__contact {
+  margin-bottom: 18px;
+
   @media (min-width: $tablet-width) {
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 58px;
-    margin-bottom: 11px;
+    margin-bottom: 34px;
 
     &::after {
       position: absolute;
       top: -7px;
       left: 50%;
+      bottom: 20px;
       width: 1px;
-      min-height: 338px;
+      height: 100%;
       content: "";
       background-color: $color-form-line;
     }
@@ -19,7 +22,7 @@
 
   @media (min-width: $desktop-width) {
     gap: 100px;
-    margin-bottom: 18px;
+    margin-bottom: 41px;
   }
 }
 
@@ -31,6 +34,10 @@
 
   &:first-child {
     padding-bottom: 23px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 0;
+    }
   }
 
   &--line {
@@ -105,16 +112,34 @@
     }
   }
 
+  &--line {
+    @media (min-width: $tablet-width) {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 34%;
+    }
+  }
+
   &--sight {
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+    }
+
     @media (min-width: $desktop-width) {
       margin-bottom: 68px;
     }
   }
+}
 
-  &--line {
-    @media (min-width: $tablet-width) {
-      padding-top: 14px;
-    }
+.form__space {
+  &::after {
+    content: "\A";
+    white-space: pre;
   }
 }
 
@@ -156,11 +181,14 @@
 
   &--mail {
     position: relative;
-    margin-bottom: 34px;
     background-image: url("../img/mail.svg");
     background-repeat: no-repeat;
     background-size: 58px 58px;
     background-position: top right;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 16px;
+    }
   }
 
   &--comment {
@@ -212,6 +240,10 @@
   max-width: 324px;
   margin-bottom: 3px;
   align-self: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 50px;
+  }
 
   @media (min-width: $desktop-width) {
     max-width: 384px;

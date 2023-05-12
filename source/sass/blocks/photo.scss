@@ -29,7 +29,6 @@
 .photo__container {
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
     padding: 23px 20px 15px;
     background-color: $color-bg-body;
   }
@@ -47,6 +46,12 @@
     @media (min-width: $desktop-width) {
       padding: 17px 20px 17px 25px;
     }
+  }
+}
+
+.photo__wrapper {
+  @media (min-width: $tablet-width) {
+    margin-right: 40px;
   }
 }
 
@@ -76,15 +81,17 @@
 
 .photo__likes {
   @media (min-width: $tablet-width) {
+    margin-left: auto;
     padding-top: 5px;
   }
 }
 
 .photo__button {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   min-width: 50px;
-  height: 26px;
+  min-height: 26px;
   font-family: inherit;
   background-color: transparent;
   border: none;
@@ -101,6 +108,11 @@
 
 .photo__icon {
   fill: $color-placeholder;
+  margin-right: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 9px;
+  }
 
   @media (min-width: $desktop-width) {
     fill: $one-color;
@@ -109,17 +121,11 @@
 
 .photo__quantity {
   align-self: flex-end;
-  margin-left: 14px;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   color: $two-color;
-
-  @media (min-width: $tablet-width) {
-    margin-left: 9px;
-  }
-
 
   @media (min-width: $desktop-width) {
     color: $one-color;

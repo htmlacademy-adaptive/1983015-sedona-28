@@ -40,10 +40,13 @@
     margin-bottom: 14px;
     font-size: 21px;
   }
+}
 
-  @media (max-width: $mobile-width-only) {
-    br {
-      display: none;
+.advantage__space {
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "\A";
+      white-space: pre;
     }
   }
 }
@@ -60,33 +63,23 @@
 .advantage__description {
   margin: 0;
 
-  @media (max-width: $mobile-width-only) {
-    br {
-      display: none;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    br {
-      display: none;
-    }
-  }
-
   &--bridge {
     @media (min-width: $desktop-width) {
       max-width: 230px;
       margin: 0 auto;
     }
   }
+}
 
-  &--road {
+.advantage__spaces {
+  &::after {
     @media (min-width: $tablet-width) {
-      max-width: 180px;
-      margin: 0 auto;
+      content: "\A";
+      white-space: pre;
     }
 
     @media (min-width: $desktop-width) {
-      max-width: 300px;
+      content: none;
     }
   }
 }
