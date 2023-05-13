@@ -1,4 +1,4 @@
-.modal__container {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,11 +8,11 @@
   background-color: $color-placeholder;
   z-index: 20;
 
-  &--sent-close {
+  &--sent {
     display: none;
   }
 
-  &--error-close {
+  &--error {
     display: none;
   }
 }
@@ -66,9 +66,9 @@
 
   &--sent {
     width: 100%;
-    min-width: 244px;
     max-width: 444px;
   }
+
 
   &--error {
     margin-bottom: 28px;

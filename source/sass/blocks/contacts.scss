@@ -2,23 +2,19 @@
   padding: 0;
   padding-bottom: 8px;
   background-color: $one-color;
-  background-image: url("../img/map-mobile.jpg");
-  background-size: 320px 350px;
-  background-position: cover;
-  background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    background-size: 768px 350px;
-  }
-
-  @media (min-width: $desktop-width) {
-    background-size: 1200px 350px;
   }
 }
 
 .contacts iframe {
+  display: block;
   width: 100%;
   border: none;
+}
+
+.contacts__image {
   display: block;
+  object-fit: cover;
 }

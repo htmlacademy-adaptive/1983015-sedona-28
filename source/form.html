@@ -8,13 +8,15 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
     <div class="page__container">
       <header class="main-header">
-        <a class="main-header__logo logo logo__inner" href="index.html">
-          <img src="img/logo.svg" alt="Логотип сайта о городе Седона." width="185" height="96">
+        <a class="main-header__logo logo" href="index.html">
+          <img class="logo__inner" src="img/logo.svg" alt="Логотип сайта о городе Седона." width="185" height="96">
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
@@ -44,7 +46,7 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/sedona-desktop.svg" width="460" height="80">
             <source media="(min-width: 768px)" srcset="img/sedona-tablet.svg" width="457" height="78">
-            <img class="hero-inner__image" src="img/sedona.svg" alt="Седона." width="229" height="39">
+            <img class="hero-inner__image" src="img/sedona-mobile.svg" alt="Седона." width="229" height="39">
           </picture>
         </div>
         <section class="review">
@@ -67,7 +69,7 @@
                   <input class="form__input" type="text" id="patronymic" name="patronymic" value="Викторович">
                 </p>
               </fieldset>
-              <fieldset class="form__group">
+              <fieldset class="form__group form__group--contact">
                 <h3 class="form__title title">Контактная информация:</h3>
                 <p class="form__info">
                   <label class="form__label" for="tel">Контактный телефон*:</label>
@@ -106,7 +108,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__group form__group--line controls">
-              <h3 class="form__title form__title--controls form__title--sight title">Посещенные<br> достопримечательности:</h3>
+              <h3 class="form__title form__title--controls form__title--line form__title--sight title">Посещенные<span class="form__space"></span> достопримечательности:</h3>
               <ul class="controls__list controls__list--sight">
                 <li class="controls__item">
                   <label class="controls__label control">
@@ -180,7 +182,7 @@
           </a>
         </div>
       </footer>
-      <div class="modal modal__container modal__container--sent-close">
+      <div class="modal modal--sent">
         <div class="modal__review modal__review--sent">
           <div class="modal__text modal__text--sent">
             <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
@@ -191,7 +193,7 @@
           </div>
         </div>
       </div>
-      <div class="modal modal__container modal__container--error-close">
+      <div class="modal modal--error">
         <div class="modal__review modal__review--error">
         <div class="modal__text modal__text--error">
           <h2 class="modal__title title">Что-то пошло не&nbsp;так!</h2>

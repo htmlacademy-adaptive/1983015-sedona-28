@@ -8,6 +8,8 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -84,14 +86,14 @@
                 </li>
                 <li class="services__item services__item--souvenir">
                   <h4 class="services__title title">Сувениры</h4>
-                  <p class="services__description">Не только китайского,<br> но&nbsp;и местного производства!</p>
+                  <p class="services__description">Не только китайского, <span class="services__space"></span> но&nbsp;и местного производства!</p>
                 </li>
               </ul>
             </li>
             <li class="advantages__item advantages__item--image advantage">
               <div class="advantage__container">
                 <div class="advantage__wrapper">
-                  <h3 class="advantage__title">Там есть<br> мост дьявола</h3>
+                  <h3 class="advantage__title">Там есть <span class="advantage__space"></span> мост дьявола</h3>
                   <p class="advantage__number">— №2 —</p>
                   <p class="advantage__description advantage__description--bridge">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
                 </div>
@@ -99,7 +101,7 @@
                   <picture>
                     <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/photo-bridge-phone@1x.webp 1x, img/photo-bridge-phone@2x.webp 2x" width="320" height="260">
+                    <source type="image/webp" srcset="img/photo-bridge-phone@1x.webp 1x, img/photo-bridge-phone@2x.webp 2x">
                     <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
                     <img class="advantage__image" src="img/photo-bridge-phone@1x.jpg" srcset="img/photo-bridge-phone@2x.jpg 2x" alt="Горы и каньон." width="320" height="260">
@@ -115,7 +117,7 @@
             <li class="advantages__item advantages__item--theme-gray advantage">
               <h3 class="advantage__title title">Красивая дорога</h3>
               <p class="advantage__number">— №4 —</p>
-              <p class="advantage__description advantage__description--road">Ехать в Седону из Лас-<br>Вегаса совсем не&nbsp;скучно!</p>
+              <p class="advantage__description">Ехать в Седону из Лас-<span class="advantage__spaces"></span>Вегаса совсем <span class="advantage__spaces"></span> не&nbsp;скучно!</p>
             </li>
             <li class="advantages__item advantages__item--theme-gray advantage">
               <h3 class="advantage__title title">Мало туристов</h3>
@@ -133,7 +135,17 @@
         </section>
         <section class="contacts">
           <h2 class="visually-hidden">Интерактивная карта</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d419172.46187613095!2d-111.8334836!3d34.8365014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sby!4v1681997392694!5m2!1sru!2sby" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d419172.46187613095!2d-111.8334836!3d34.8365014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sby!4v1681997392694!5m2!1sru!2sby" width="320" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <noscript>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg.jpg 2x">
+              <img class="contacts__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Интерактивная карта." width="320" height="350">
+            </picture>
+          </noscript>
         </section>
       </main>
       <footer class="footer">
@@ -161,7 +173,7 @@
         <div class="footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">Разработано</span>
-            <svg  width="27" height="35">
+            <svg  class="copyright-icon" width="27" height="35">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
