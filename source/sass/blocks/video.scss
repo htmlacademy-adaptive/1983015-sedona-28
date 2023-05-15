@@ -42,9 +42,10 @@
 }
 
 .video__link {
+  position: relative;
   display: flex;
   justify-content: center;
-  text-decoration: none;
+  width: 100%;
 }
 
 .video__image {
@@ -61,4 +62,20 @@
   @media (min-width: $desktop-width) {
     width: 800px;
   }
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 54px;
+  background-color: transparent;
+  background-image: url("../../img/polygon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 48px 54px;
+  border: none;
+  cursor: pointer;
 }

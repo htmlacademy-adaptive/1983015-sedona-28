@@ -10,6 +10,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 
@@ -22,7 +23,6 @@
     }
 
     @media (min-width: $desktop-width) {
-      justify-content: space-between;
       margin-bottom: 85px;
       padding-left: 18px;
       padding-right: 18px;
@@ -38,7 +38,6 @@
     }
 
     @media (min-width: $desktop-width) {
-      gap: 64px;
       margin-left: 44px;
       margin-right: 44px;
       margin-bottom: 82px;
@@ -54,6 +53,18 @@
 
     &:last-child {
       margin-bottom: 34px;
+    }
+  }
+
+  &--impression {
+    @media (min-width: $desktop-width) {
+      max-width: 250px;
+    }
+  }
+
+  &--sight {
+    @media (min-width: $desktop-width) {
+      max-width: 185px;
     }
   }
 }
